@@ -1,0 +1,8 @@
+[
+  {
+    "error_message": "Previous build caches not available.",
+    "category": "build error",
+    "fix": "Add a cache restoration step to the GitHub Actions workflow file (e.g., `.github/workflows/build.yml`) using the `actions/cache` action. Modify the workflow to include: 1. **Restore cache** before dependencies are installed. 2. **Save cache** after dependencies are installed but before subsequent steps. Example Fix File Contents: ```yaml name: Build on: [push] jobs: build: runs-on: ubuntu-latest steps: - name: Checkout code uses: actions/checkout@v3 - name: Restore cache uses: actions/cache@v3 with: path: ~/.cache key: ${{ hashFiles('package.json') }} - name: Install dependencies run: npm install - name: Save cache uses: actions/cache@v3 with: path: ~/.cache key: ${{ hashFiles('package.json') }} - name: Build project run: npm run build ```",
+    "reasoning": "The error occurs because the build process lacks cache data from previous runs, leading to redundant work (e.g., reinstalling dependencies). By explicitly restoring and saving caches using `actions/cache`, the workflow reuses cached artifacts (e.g., `node_modules`), reducing build time and avoiding redundant operations. This addresses the root cause by ensuring caches are properly managed in the CI/CD pipeline."
+  }
+]

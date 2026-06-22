@@ -1,0 +1,6 @@
+google-adk==2.3.0
+litellm
+pydantic
+requests
+PyGithub
+python-dotenv
