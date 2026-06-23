@@ -242,4 +242,7 @@ deploymind_pipeline/
 
 ---
 
-*Screenshots of execution should be added here.*
+## Screenshots of execution
+### First- Successfull deployment
+
+![alt text](Screenshots/error4.1.jpeg)
