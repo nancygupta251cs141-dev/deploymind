@@ -244,5 +244,17 @@ deploymind_pipeline/
 
 ## Screenshots of execution
 ### First- Successfull deployment
-
 ![alt text](Screenshots/error4.1.jpeg)
+### Second- Build failed due to missing previous cache data
+![alt text](Screenshots/error1.2.jpeg)
+![alt text](Screenshots/error1.3.jpeg)
+![alt text](Screenshots/error1.1.jpeg)
+### Third- Wrong root directory
+![alt text](Screenshots/error2.3.jpeg)
+![alt text](Screenshots/error2.2.jpeg)
+![alt text](Screenshots/error2.1.jpeg)
+### Fourth- Empty package.json file
+![alt text](Screenshots/error3.4.jpeg)
+![alt text](Screenshots/error3.3.jpeg)
+![alt text](Screenshots/error3.1.jpeg)
+![alt text](Screenshots/error3.2.jpeg)
